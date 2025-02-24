@@ -1,1 +1,2 @@
-<p>employee-layout works!</p>
+<employee-filter-form [employees]="employees" (filteredEmployees)="updateFilteredEmployees($event)"></employee-filter-form>
+<employee-table [employees]="filteredEmployees"></employee-table>

@@ -8,7 +8,7 @@ import { Employee } from '../../models/employee/employee';
 })
 export class EmployeeService {
 
-  private apiUrl = 'http://localhost:8081/thales-1.1/employees'; // URL del backend
+  private apiUrl = '/thales-1.1/employee/feign/list'; // URL del backend
 
   constructor(private http: HttpClient) {}
 

@@ -1,0 +1,7 @@
+<div class="container mt-4">
+    <h2>Filtrar Empleados</h2>
+    <div class="form-group">
+      <label for="employeeId">ID del Empleado:</label>
+      <input id="employeeId" type="text" class="form-control" [formControl]="employeeId" (input)="filterEmployees()">
+    </div>
+  </div>

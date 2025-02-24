@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Employee } from 'src/app/shared/models/employee/employee';
 import { EmployeeService } from 'src/app/shared/services/employee/employee.service';
 
@@ -7,16 +7,8 @@ import { EmployeeService } from 'src/app/shared/services/employee/employee.servi
   templateUrl: './employee-table.component.html',
   styleUrls: ['./employee-table.component.scss']
 })
-export class EmployeeTableComponent implements OnInit {
+export class EmployeeTableComponent {
 
-  employees: Employee[] = [];
-
-  constructor(private employeeService: EmployeeService) {}
-
-  ngOnInit(): void {
-    this.employeeService.getEmployees().subscribe((data) => {
-      this.employees = data;
-    });
-  }
+  @Input() employees: any[] = []; 
 
 }
