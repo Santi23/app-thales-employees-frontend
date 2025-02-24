@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 class="text-primary">Employee List</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Salary</th>
+          <th>Annual Salary</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.employee_name }}</td>
+          <td>{{ employee.employee_salary | currency }}</td>
+          <td>{{ employee.employee_annual_salary | currency }}</td>
+          <td>{{ employee.employee_age }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
